@@ -88,11 +88,10 @@ const Detail = () => {
       productImg,
       selectedSize,
     });
-    console.log(cart);
     localStorage.setItem("cart", JSON.stringify(cart));
 
     const currentCount = Number(localStorage.getItem("cartCount") || 0);
-    localStorage.setItem("cartCount", (currentCount + 1).toString());
+    localStorage.setItem("cartCount", (currentCount + quantity).toString());
 
     window.dispatchEvent(new Event("storage"));
     alert("Product added to cart! 🛒");
