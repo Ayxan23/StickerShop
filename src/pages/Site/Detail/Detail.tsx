@@ -4,6 +4,10 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaCartShopping } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 
+import { useDispatch, useSelector } from "react-redux";
+import { fetchData } from "../../../redux/dataSlice";
+import { RootState, AppDispatch } from "../../../redux/store";
+
 interface Product {
   id: string;
   title: string;
@@ -36,14 +40,16 @@ const Detail = () => {
     "5.5 x 5.5": 11.99,
   };
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch(
-          "https://doggystickers.vercel.app/_next/data/xyaZmLIU1DsdFtyNNRye4/index.json"
-        );
-        const data = await response.json();
+  const dispatch = useDispatch<AppDispatch>();
+  const data = useSelector((state: RootState) => state.data.data);
 
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
         if (data && data.pageProps?.products) {
           setProducts(
             data.pageProps.products.map((p: { node: Product }) => p.node)
@@ -54,8 +60,8 @@ const Detail = () => {
       }
     };
 
-    fetchProducts();
-  }, []);
+    fetchProduct();
+  }, [data]);
 
   useEffect(() => {
     if (id && products.length > 0) {
@@ -149,7 +155,7 @@ const Detail = () => {
       </section>
     </div>
   ) : (
-    <p>Not Found</p>
+    <p className={styles.loading}>Loading...</p>
   );
 };
 
