@@ -1,0 +1,95 @@
+.cartContainer {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.cartTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5b21b6;
+  margin-bottom: 20px;
+}
+
+.cartTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cartTable th,
+.cartTable td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.cartTable th {
+  color: rgb(0, 174, 255);
+  font-weight: bold;
+}
+
+.cartTable img {
+  width: 50px;
+  height: auto;
+}
+
+.quantityInput {
+  width: 50px;
+  text-align: center;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(0, 174, 255);
+  font-size: 18px;
+}
+
+.totalPrice {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5b21b6;
+}
+
+.payButton {
+  padding: 10px 20px;
+  border: 1px solid rgb(0, 174, 255);
+  background: white;
+  color: rgb(0, 174, 255);
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.payButton:hover {
+  background: rgb(0, 174, 255);
+  color: white;
+}
+
+.imgName {
+  display: flex;
+  align-items: center;
+}
+
+.pay {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pay button {
+  width: 300px;
+}
+
+.yourCart{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.yourCart h2{
+font-size: 30px;
+}

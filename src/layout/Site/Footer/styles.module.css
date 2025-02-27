@@ -1,0 +1,11 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    margin-top: 16px;
+    border-top: 1px solid rgb(186, 186, 186);
+    font-size: 22px;
+    margin-bottom: -24px;
+    opacity: 0.6;
+}

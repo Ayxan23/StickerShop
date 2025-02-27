@@ -1,0 +1,111 @@
+.detail {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 40px;
+  margin-top: 30px;
+}
+
+.detailImg,
+.detailInfo {
+  flex: 1;
+}
+
+.detailImg {
+  display: flex;
+}
+
+.detailImg img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.detailInfo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #5b21b6;
+  color: #5b21b6;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
+.detailInfo h3,
+.detailInfo span {
+  font-size: 32px;
+  color: #5b21b6;
+  font-weight: 700;
+  margin-top: 20px;
+  display: block;
+}
+
+.detailInfo p {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.detailInput select,
+.detailInput input {
+  outline: none;
+  border: 1px solid rgb(0, 145, 255);
+  border-radius: 6px;
+  height: 50px;
+  padding: 0 10px;
+}
+
+.detailInput {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+.detailInput input {
+  width: 80px;
+}
+
+.detailSelect {
+  width: 100%;
+}
+
+.detailInfo button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #5b21b6;
+  color: white;
+  background-color: #5b21b6;
+  padding: 5px 10px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.detailInfo button:hover {
+  background-color: white;
+  color: #5b21b6;
+}
+
+.detailInput label {
+  display: flex;
+  flex-direction: column;
+  color: gray;
+  gap: 5px;
+}
+
+.detailInput input[type="number"]::-webkit-inner-spin-button,
+.detailInput input[type="number"]::-webkit-outer-spin-button {
+  appearance: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .detail {
+    flex-direction: column;
+  }
+}
