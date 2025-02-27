@@ -9,7 +9,9 @@ const initialState: ApiState = {
 };
 
 export const fetchData = createAsyncThunk("data/fetchData", async () => {
-  const response = await fetch("https://doggystickers.vercel.app/_next/data/xyaZmLIU1DsdFtyNNRye4/index.json");
+  const response = await fetch(
+    "https://doggystickers.vercel.app/_next/data/xyaZmLIU1DsdFtyNNRye4/index.json"
+  );
   return await response.json();
 });
 
@@ -18,9 +20,12 @@ const dataSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchData.fulfilled, (state, action: PayloadAction<any>) => {
-      state.data = action.payload;
-    });
+    builder.addCase(
+      fetchData.fulfilled,
+      (state, action: PayloadAction<any>) => {
+        state.data = action.payload;
+      }
+    );
   },
 });
 
